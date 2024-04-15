@@ -21,7 +21,7 @@ const bodyParser= require('body-parser')
 const PORT=8000;
 
 
-//middlewares
+//middlewares 
 
 
 // app.use(express.json())
