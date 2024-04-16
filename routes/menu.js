@@ -30,6 +30,7 @@ router.post('/',async (req,res)=>{
        
       const response= await menu.find()
        console.log('data fetched',response);
+       console.log('data fetched hello')
        res.status(200).json(response)
     }
     catch(err){
@@ -48,7 +49,7 @@ router.post('/',async (req,res)=>{
     if(tasteType =='Sweet'  || tasteType == "Spicy"  || tasteType == "Sour"){
          const response = await menu.find({taste: tasteType})
          res.status(200).json(response)
-         console.log("data fetched")
+         console.log("data fetched ")
     }
     else{
         

@@ -14,8 +14,8 @@ db.on('connected',()=>{
 db.on('error',(err)=>{
     console.log('MongoDB connection error',err)
 })
-// db.on('disconnected',()=>{
-//     console.log('MongoDB disconnected')
-// })
+db.on('disconnected',()=>{
+    console.log('MongoDB disconnected')
+})
 
 module.exports=db
