@@ -19,8 +19,9 @@ const taskRoute= require('./routes/task')
 const urlRoute= require('./routes/url')
 const app = express();
 const bodyParser= require('body-parser')
-const PORT=8000;
-
+require('dotenv').config();
+// const PORT=8000;
+const PORT = process.env.PORT || 3000;
 
 //middlewares 
 // commit for test
@@ -41,5 +42,6 @@ app.use('/url', urlRoute)
 
 
 //server
+
 
 app.listen(PORT,()=>{console.log(`server started at port ${PORT}`)})
