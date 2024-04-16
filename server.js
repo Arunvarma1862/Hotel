@@ -16,6 +16,7 @@ const homeRoute= require('./routes/home')
 const personRoute= require('./routes/person')
 const menuRoute= require('./routes/menu')
 const taskRoute= require('./routes/task')
+const urlRoute= require('./routes/url')
 const app = express();
 const bodyParser= require('body-parser')
 const PORT=8000;
@@ -36,6 +37,7 @@ app.use('/',homeRoute)
 app.use('/person',personRoute);
 app.use('/menu',menuRoute)
 app.use('/api/tasks',taskRoute)
+app.use('/url', urlRoute)
 
 
 //server
